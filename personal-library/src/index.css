@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.book {
+  position: relative;
+}
+
+.book:hover {
+  background-color: #eee;
+}
+
+.book:hover .book-action-buttons {
+  display: flex;
+}
+
+.book-action-buttons {
+  position: absolute;
+  right: 20px;
+  bottom: 50%;
+  width: 80px;
+  height: 40px;
+  display: none;
+  justify-content: space-between;
+}
+
+.book-action-buttons button {
+  position: relative;
+}
+
+.library-container {
+  padding: 40px;
+}
+
+.content-container {
+  margin-top: 20px;
+}
+
+form[role="dialog"] {
+  width: 600px;
+}
+
+.dialog-form {
+  display: flex;
+  flex-direction: column;
+}
+
+div.input-field {
+  padding-bottom: 15px;
+}
+
+div.input-field:last-child {
+  padding-bottom: 0;
+}
