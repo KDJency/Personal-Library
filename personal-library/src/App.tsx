@@ -28,7 +28,7 @@ function App() {
     setOpen(true);
   };
 
-  const handleClose = async (newValues: any, type: string) => {
+  const handleClose = async (newValues: Book, type: string) => {
     setOpen(false);
     setOpenDeleteDialog(false);
     let newBookList = booksData;
@@ -44,7 +44,7 @@ function App() {
           });
           break;
         case 'edit':
-          newBookList = booksData.map((book: any) => {
+          newBookList = booksData.map((book: Book) => {
             if (book.id === newValues.id) {
               return newValues
             }
@@ -58,7 +58,7 @@ function App() {
           });
           break;
         case 'delete':
-          newBookList = booksData.filter((book: any) => book.id !== newValues.id);
+          newBookList = booksData.filter((book: Book) => book.id !== newValues.id);
           await mutate(deleteBook(newValues.id), {
             optimisticData: newBookList,
             rollbackOnError: true,
@@ -125,7 +125,7 @@ function App() {
     return <>
       <Stack spacing={2}>
         {
-          booksData?.map((book: any, index: number) =>
+          booksData?.map((book: Book, index: number) =>
             <BookElement
               key={index}
               book={book}

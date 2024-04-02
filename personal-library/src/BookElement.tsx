@@ -2,7 +2,7 @@ import { IconButton, Paper, Typography } from "@mui/material";
 import { Delete, Edit } from '@mui/icons-material';
 
 export interface Book {
-  id?: string,
+  id: number,
   title: string,
   author: string,
   genre: string,
@@ -17,6 +17,7 @@ interface BookProps {
 
 export function BookElement(props: BookProps) {
   const { book, handleEdit, handleDelete } = props;
+
   return (
     <Paper elevation={2} sx={{ p: 2 }} className="book">
       {renderInputFields()}
@@ -72,5 +73,3 @@ export function BookElement(props: BookProps) {
     </>
   }
 }
-
-export default Book;

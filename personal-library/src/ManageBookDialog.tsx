@@ -10,6 +10,7 @@ import {
 import { useEffect } from "react";
 import { useFormik } from 'formik';
 import CloseIcon from '@mui/icons-material/Close';
+import { Book } from "./BookElement";
 
 interface ManageBookDialogProps {
   open: boolean;
@@ -27,7 +28,7 @@ export function ManageBookDialog(props: ManageBookDialogProps) {
 
   const formik = useFormik({
     initialValues: dialogValues,
-    onSubmit: values => {
+    onSubmit: (values: any) => {
       onClose({...values, ...dialogValues.id}, dialogType);
     },
   });

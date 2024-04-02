@@ -6,6 +6,7 @@ import {
   DialogTitle,
   Typography
 } from "@mui/material";
+import { Book } from "./BookElement";
 
 interface DeleteBookDialogProps {
   open: boolean;
